@@ -13,33 +13,30 @@
 
         $con=mysqli_connect($host, $user, $pwd, $dbname);
         if ($con->connect_errno!=0){
-            die('数据库链接失败');
+            die('数据库连接失败');
             exit;
         }
         mysqli_set_charset($con,"utf8");
 
-        $username=$_POST["name"];
-        $password=$_POST["password"];
-        $newpassword=$_POST["newpassword"];
-        $repassword=$_POST["repassword"];
+        $username = $_POST["name"];
+        $password = $_POST["password"];
+        $newpassword = $_POST["newpassword"];
+        $repassword = $_POST["repassword"];
 
-        $dbusername=array();
-        $dbpassword=array();
-        $sql1="SELECT * FROM user";
-        $result=mysqli_query($con,$sql1);
-        while($row=mysqli_fetch_array($result))//while循环将$result中的结果找出来
+        $dbusername = array();
+        $dbpassword = array();
+        $sql1 = "SELECT * FROM user";
+        $result = mysqli_query($con,$sql1);
+        while($row = mysqli_fetch_array($result))//while循环将$result中的结果找出来
         {
-            $dbusername[]=$row['name'];
-            $dbpassword[]=$row['pwd'];
+            $dbusername[] = $row['name'];
+            $dbpassword[] = $row['pwd'];
         }
-        $flag=0;      //用户存在的标记
-        $length=count($dbusername);
-        for($i=0;$i<$length;$i++)
-        {
-            if($username!=$dbusername[$i])
-            {
-                if($i==$length-1)
-                {
+        $flag = 0;      //用户存在的标记
+        $length = count($dbusername);
+        for($i = 0;$i < $length;$i++){
+            if($username != $dbusername[$i]){
+                if($i == $length-1){
     ?>
                     <script type="text/javascript">
                         alert("用户名不存在");
@@ -47,19 +44,15 @@
                     </script>
     <?php
                 }
+            }else {
+                $mima = $i; //对应用户的密码
+                $flag = 1;
+                break;
             }
-          else
-          {
-            $mima=$i; //对应用户的密码
-            $flag=1;
-            break;
-          }
-      }
+        }
 
-        if($flag)
-        {
-            if($password!=$dbpassword[$mima])
-            {
+        if($flag){
+            if($password != $dbpassword[$mima]){
     ?>
                 <script type="text/javascript">
                   alert("原密码错误");
@@ -67,12 +60,11 @@
                 </script>
     <?php
             }
-            else
-            {
-                $up_sql="UPDATE user SET pwd = '$newpassword' WHERE name = '$dbusername[$i]'";
-                var_dump($up_sql);
+            else {
+                $up_sql = "UPDATE user SET pwd = '$newpassword' WHERE name = '$dbusername[$i]'";
+                // var_dump($up_sql);
                 $is = $con->query($up_sql);
-                var_dump($is);
+                // var_dump($is);
                 if($is == true){
     ?>
                     <script type="text/javascript">

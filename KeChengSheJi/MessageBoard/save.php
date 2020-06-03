@@ -10,16 +10,16 @@
         $pwd ='';
         $dbname = 'photosite';
 
-        $con=mysqli_connect($host, $user, $pwd, $dbname);
+        $con = mysqli_connect($host, $user, $pwd, $dbname);
         if ($con->connect_errno!=0)
             die('数据库链接失败');
         mysqli_set_charset($con,"utf8");
 
-        $name=$_POST["name"];
-        $content=$_POST["content"];
+        $name = $_POST["name"];
+        $content = $_POST["content"];
 
-        $time=time();
-        if ($content=='') {
+        $time = time();
+        if ($content == '') {
     ?>
             <script type="text/javascript">
                 alert("留言内容不能为空");
@@ -27,7 +27,7 @@
             </script>
     <?php
         }
-        if($name==''){
+        if($name == ''){
     ?>
             <script type="text/javascript">
                 alert("留言昵称不能为空");
@@ -35,9 +35,9 @@
             </script>
     <?php
         }
-        if ($name!=''&&$content!='') {
-            $sql2="INSERT INTO messageboard (name,content,intime) VALUES  ('{$name}','{$content}','{$time}')";
-            $is=$con->query($sql2);
+        if ($name != ''&&$content != '') {
+            $sql2 ="INSERT INTO messageboard (name,content,intime) VALUES  ('{$name}','{$content}','{$time}')";
+            $is = $con->query($sql2);
             if($is == true){
     ?>
             <script type="text/javascript">

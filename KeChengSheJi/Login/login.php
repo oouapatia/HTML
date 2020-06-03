@@ -13,7 +13,7 @@
 
       $con=mysqli_connect($host, $user, $pwd, $dbname);
       if ($con->connect_errno!=0){
-          die('数据库链接失败');
+          die('数据库连接失败');
           exit;
       }
       mysqli_set_charset($con,"utf8");
@@ -25,19 +25,15 @@
       $dbpassword = array();
       $sql = "SELECT * FROM user";
       $result = mysqli_query($con,$sql);
-      while($row = mysqli_fetch_array($result))//while循环将$result中的结果找出来
-      {
+      while($row = mysqli_fetch_array($result)){ // while循环提取$result中的结果
             $dbusername[] = $row['name'];
             $dbpassword[] = $row['pwd'];
       }
 
       $length = count($dbusername);
-      for($i = 0;$i < $length;$i++)
-      {
-        if($username == $dbusername[$i])
-        {
-          if($password == $dbpassword[$i])
-          {
+      for($i = 0;$i < $length;$i++){
+        if($username == $dbusername[$i]){
+          if($password == $dbpassword[$i]){
     ?>
             <script type="text/javascript">
               alert("登陆成功");
@@ -49,12 +45,9 @@
       }
 
       $flag = 0;      //用户存在的标记
-      for($i = 0;$i<$length;$i++)
-      {
-          if($username != $dbusername[$i])
-          {
-            if($i == $length-1)
-            {
+      for($i = 0;$i<$length;$i++){
+          if($username != $dbusername[$i]){
+            if($i == $length-1){
     ?>
               <script type="text/javascript">
                 alert("用户名不存在");
@@ -63,18 +56,15 @@
     <?php
             }
           }
-          else
-          {
+          else {
             $mima = $i; //对应用户的密码
             $flag = 1;
             break;
           }
       }
 
-      if($flag)
-      {
-        if($password != $dbpassword[$mima])
-        {
+      if($flag){
+        if($password != $dbpassword[$mima]){
     ?>
             <script type="text/javascript">
               alert("密码错误");

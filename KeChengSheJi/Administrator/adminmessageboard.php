@@ -6,31 +6,6 @@
     <link href="/KeChengSheJi/MessageBoard/messageboard.css" rel="stylesheet" type="text/css" />
 </head>
 
-<?php
-        $host ='127.0.0.1';
-        $user ='root';
-        $pwd ='';
-        $dbname = 'photosite';
-
-        $con=mysqli_connect($host, $user, $pwd, $dbname);
-        if ($con->connect_errno!=0){
-            die('数据库链接失败');
-            exit;
-        }
-        mysqli_set_charset($con,"utf8");
-
-        $sql = "SELECT * FROM messageboard ORDER BY id DESC";
-        $result=mysqli_query($con,$sql);
-        if($result==false){
-            echo "sql错误";
-            exit;
-        }
-        $rows=array();
-        while($row=mysqli_fetch_array($result)){
-                $rows[]=$row;
-        }
-?>
-
 <body>
     <div class='update'>
         <form method="post"  action="adminsave.php">
@@ -47,6 +22,29 @@
         </form>
             <br>
         <?php
+            $host ='127.0.0.1';
+            $user ='root';
+            $pwd ='';
+            $dbname = 'photosite';
+
+            $con = mysqli_connect($host, $user, $pwd, $dbname);
+            if ($con->connect_errno!=0){
+                die('数据库链接失败');
+                exit;
+            }
+            mysqli_set_charset($con,"utf8");
+
+            $sql = "SELECT * FROM messageboard ORDER BY id DESC";
+            $result = mysqli_query($con,$sql);
+            if($result == false){
+                echo "sql错误";
+                exit;
+            }
+            $rows = array();
+            while($row = mysqli_fetch_array($result)){
+                $rows[] = $row;
+            }
+
             foreach ($rows as $row) {
         ?>
             <div class='msg'>
@@ -61,6 +59,7 @@
         <?php
             }
         ?>
+
         <form method="post" action="admindelete.php">
             <div class='del'>
                 <span>请输入你想删除的留言的昵称:</span><br>
