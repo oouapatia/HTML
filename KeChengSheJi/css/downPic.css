@@ -1,0 +1,130 @@
+body{
+    min-width:1500px;
+    margin: 0px;
+    padding: 0px;
+}
+#head{
+    margin: auto;
+    width: 70%;
+    height: 36px;
+    border: 1px solid black;
+    background: black;
+}
+.logo{
+    margin-left: 100px;
+}
+.upIn{
+    position: absolute;
+    float:right;
+    top: 10px;
+    margin-left: 60%;
+    height: 20px;
+    background: #005792;
+    border-radius: 3px;
+}
+.zhuC{
+    position: absolute;
+    float:right;
+    top: 10px;
+    margin-left: 65%;
+    height: 20px;
+    background: #005792;
+    border-radius: 3px;
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+    font-size:small;
+}
+a:visited{
+    text-decoration: none;
+    color: #FFF;
+}
+nav {
+    position: absolute;
+	width: 70%;
+    height: 30px;
+    margin: auto;
+    padding: 0;
+    top: -15px;
+    background-color: black;
+}
+nav ul{
+	list-style: none;
+	margin-left: 50px;
+    height: 30px;
+}
+nav ul li{
+	position: relative;
+    float: left;
+    width: 120px;    
+} 
+nav ul li ul{
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+
+}
+
+nav ul li:hover ul{
+    display: block;
+    animation: theNavOpen 1.5s;
+}
+
+
+.t-1 nav a:link,a:visited{
+	display: block;
+	padding: 10px 0;
+    text-decoration: none;
+    background-color:#c11136;
+	margin-right:10px;
+	color: #FFF;
+	text-align:center;
+    z-index: 100;   
+}
+.t-1 nav a:hover{
+	background-color:#F00;
+    z-index: 100;
+}
+
+@keyframes theNavOpen{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@-webkit-keyframes theNavOpen{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@-moz-keyframes theNavOpen{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.picL{
+    margin: auto;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.picL img{
+    margin-left: 1%;
+    margin-bottom: 8px;
+    width: 31%;
+    height: 200px;
+}
+#foot{
+    height: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    background: black;
+}
+#foot p{
+    text-align: center;
+    color: white;
+}

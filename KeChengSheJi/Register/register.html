@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>注册</title>
+    <link href="register.css" rel="stylesheet" type="text/css" />
+    <script src="register.js"></script>
+</head>
+<body>
+    <form name="register_form" class="elegant-aero" method="post" onsubmit="return mycheck();" action="register.php">
+            <h1>快速注册</h1>
+            <br><br>
+
+            <div>
+                <font size="3"><span>用&nbsp;&nbsp;户&nbsp;名</span></font>
+                <input type="text" name="name" id="name" value="" onblur="checkName();"/><span id="nameinfo"></span><br>
+                <font class="gs">支持汉字、字母,不能包含数字空格</font>
+                <br><br>
+            </div>
+
+            <div>
+                <font size="3"><span>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;</span></font>
+                <input type="password" name="password" id="password" value="" onblur="checkPassword();"/><span id="passwordinfo"></span><br>
+                <font class="gs">密码需大于6个字符</font>
+                <br><br>
+            </div>
+
+            <div>
+                <font size="3"><span>密码确认</span></font>
+                <input type="password" name="repassword" id="repassword" value="" onblur="checkRepassword();"/><span id="repasswordinfo"></span>
+                <br><br>
+            </div>
+
+            <div>
+                <label><span> &nbsp; </span></label>
+                <input type="submit" class="button" value="立即注册"/>
+                <br><br>
+            </div>
+        </form>
+</body>
+</html>
+

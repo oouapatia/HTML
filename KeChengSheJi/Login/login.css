@@ -1,0 +1,67 @@
+body{
+    width: auto;
+    height: auto;
+    background:url(/KeChengSheJi/images/loginBackground.jpg)  no-repeat center;
+    background-size:cover;
+    background-attachment:fixed;
+    background-color:#CCCCCC;
+}
+
+.elegant-aero{
+    margin-left: 10px;
+    margin-right: auto;
+    margin-top: 125px;
+    max-width: 430px;
+    padding: 20px 20px 20px 20px;
+}
+.legant-aero h1{
+    font: 24px;
+    padding: 10px 10px 10px 20px;
+    display: block;
+    background: #C0E1FF;
+    border-bottom: 1px solid #BBDDFF;
+    margin: -20px -20px 15px;
+}
+
+.elegant-aero h1>span{
+    display: block;
+    font-size: 11px;
+}
+
+
+.elegant-aero label{
+    display: block;
+    margin: 0px 0px 5px;
+}
+
+.zc{
+    font-size: 12px;
+}
+.gly{
+    font-size: 12px;
+}
+.xg{
+    font-size: 12px;
+}
+
+#name{
+    width: 250px;
+    height: 30px;
+}
+
+#password{
+    width: 250px;
+    height: 30px;
+    /*background-color: #FEF8C9;*/
+}
+
+.button{
+    border-radius: 5px;
+    cursor: pointer;
+    width: 320px;
+    height: 45px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    background-color: #FFCC00;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>管理员登录</title>
+    <link href="/KeChengSheJi/Login/login.css" rel="stylesheet" type="text/css" />
+    <script src="/KeChengSheJi/Login/login.js"></script>
+</head>
+<body>
+        <form name="login_form" class="elegant-aero" method="post" onsubmit="return mycheck();" action="adminlogin.php">
+            <h1 style="color:white;">管理员登录
+                <span id="hips" style="color:white;">Please fill all the texts in the fileds.</span>
+            </h1>
+            <br>
+
+            <div>
+                <font size="3" color="white"><span>管理员&nbsp;&nbsp;</span></font>
+                <input type="text" name="name" id="name" value="" onblur="checkName();"/><span id="nameinfo"></span>
+                <br><br>
+            </div>
+
+            <div>
+                <font size="3" color="white"><span>密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;</span></font>
+                <input type="password" name="password" id="password" value="" onblur="checkPassword();"/><span id="passwordinfo"></span>
+                <br><br>
+            </div>
+            <div>
+                <label><span> &nbsp; </span></label>
+                <input type="submit" class="button" value="登录"/>
+        </form>
+
+
+                <label><span> &nbsp; </span></label>
+                <span class="zc">
+                    <a href="adminregister.html" style="text-decoration: none;color: white">点击注册</a>
+                </span>&nbsp;&nbsp;
+                <span class="xg">
+                    <a href="adminrevise.html" style="text-decoration: none;color: white">修改密码</a>
+                </span>
+            </div>
+
+
+</body>
+</html>

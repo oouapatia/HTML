@@ -1,0 +1,220 @@
+body{
+    min-width:1500px;
+    margin: 0px;
+    padding: 0px;
+}
+#head{
+    margin: auto;
+    width: 70%;
+    height: 36px;
+    border: 1px solid black;
+    background: black;
+}
+.logo{
+    margin-left: 100px;
+}
+.upIn{
+    position: absolute;
+    float:right;
+    top: 10px;
+    margin-left: 60%;
+    height: 20px;
+    background: black;
+    border-radius: 3px;
+}
+.zhuC{
+    position: absolute;
+    float:right;
+    top: 10px;
+    margin-left: 65%;
+    height: 20px;
+    background: black;
+    border-radius: 3px;
+}
+.del{
+    position: absolute;
+    float:right;
+    top: 10px;
+    margin-left: 67%;
+    height: 20px;
+    border-radius: 3px;
+}
+.logo a{
+    text-decoration: none;
+    color: #FFF;
+    font-size:small;
+}
+nav {
+    position: absolute;
+	width: 70%;
+    height: 30px;
+    margin: auto;
+    padding: 0;
+    top: -15px;
+    background-color: black;
+}
+nav ul{
+	list-style: none;
+	margin-left: 50px;
+    height: 30px;
+}
+nav ul li{
+	position: relative;
+    /*padding-top: 5px;*/
+    float: left;
+    width: 120px;
+}
+nav ul li ul{
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+
+}
+
+nav ul li:hover ul{
+    display: block;
+    animation: theNavOpen 1.5s;
+}
+
+
+.t-1 nav a:link,a:visited{
+	display: block;
+	padding: 10px 0;
+    text-decoration: none;
+    background-color:#c11136;
+	margin-right:10px;
+	color: #FFF;
+	text-align:center;
+    z-index: 100;
+}
+.t-1 nav a:hover{
+	background-color:#F00;
+    z-index: 100;
+}
+
+@keyframes theNavOpen{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@-webkit-keyframes theNavOpen{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@-moz-keyframes theNavOpen{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    height: 550px;
+    margin:15px auto 15px auto;
+    box-shadow: 0 0 5px green;
+    overflow: hidden;
+}
+.wrap{
+    position: absolute;
+    width: 7000px;
+    height: 550px;
+    z-index: 1;
+}
+
+.container .wrap img {
+    float: left;
+    width: 1000px;
+    height: 550px;
+}
+
+.container .buttons {
+    position: absolute;
+    right: 300px;
+    bottom:20px;
+    width: 280px;
+    height: 10px;
+    z-index:2;
+}
+
+ .container .buttons span {
+    margin-left: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #929aab;
+    text-align: center;
+    color:white;
+    cursor: pointer;
+}
+.container .buttons span.on{
+    background-color: #eeeeee;
+}
+
+.container .arrow {
+    position: absolute;
+    top: 40%;
+    color: #b73535;
+    padding:0px 14px;
+    border-radius: 50%;
+    font-size: 50px;
+    text-decoration: none;
+    text-align: center;
+    z-index: 2;
+    display: none;
+}
+.container .arrow_left {
+    left: 10px;
+}
+.container .arrow_right {
+    right: 10px;
+}
+.container:hover .arrow {
+    display: block;
+}
+.container .arrow:hover {
+    color: #eeeeee;
+}
+
+#newCont{
+    margin: 15px auto 15px auto;
+    width: 65%;
+    height: 30px;
+    background: #2d4059;
+}
+#newCont p{
+    height: 15px;
+    margin-left: 50px;
+    color: white;
+}
+
+.picL{
+    margin: auto;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.picL img{
+    margin-left: 1%;
+    margin-bottom: 8px;
+    width: 31%;
+    height: 200px;
+}
+#foot{
+    height: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    background: black;
+}
+#foot p{
+    text-align: center;
+    color: white;
+}
+.vip .img{
+    margin-left: 500px;
+}

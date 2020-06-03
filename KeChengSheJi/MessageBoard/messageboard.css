@@ -1,0 +1,88 @@
+body{
+    width: auto;
+    height: auto;
+    background:url(/KeChengSheJi/images/messageBackground.jpg)  no-repeat center;
+    background-size:cover;
+    background-attachment:fixed;
+    background-color:#CCCCCC;
+}
+
+.update{
+    width:800px;
+    margin:0px auto;
+}
+.title{
+    padding-left: 55px;
+    width: 200px;
+    border-radius: 10px;
+    border:1px solid #000;
+    margin-left: 250px;
+    font: normal 600 30px "微软雅黑";
+}
+.add{
+    border-radius: 3px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    border:1px solid #000;
+    width: 700px;
+}
+.add .content{
+    border-radius: 10px;
+    width: 598px;
+    margin: 0;
+    padding: 0;
+    background:url(/KeChengSheJi/images/contetnBackground.jpg)  no-repeat center;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.add .btn{
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 20;
+    background: white;
+}
+.nr{
+    font: normal 600 25px "微软雅黑";
+}
+.ren{
+    font: normal 600 18px "微软雅黑";
+}
+
+.del .button{
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 20;
+    color: red;
+    background-color: white;
+}
+.msg{
+    margin: 25px 0px;
+    background:url(/KeChengSheJi/images/reviewBackeground.jpg)  no-repeat center;
+    background-size:cover;
+    background-attachment:fixed;
+    padding: 5px;
+}
+.info{
+    overflow: hidden;
+}
+.msg .user{
+    float: left;
+    color: black;
+}
+.msg .time{
+    float: right;
+    color: white;
+}
+.msg .content{
+    width:100%;
+    color: white;
+}
+.msg .btn{
+    float: right;
+    margin: 5px;
+}
+

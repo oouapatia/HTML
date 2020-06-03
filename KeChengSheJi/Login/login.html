@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>登录</title>
+    <link href="login.css" rel="stylesheet" type="text/css" />
+    <script src="login.js"></script>
+</head>
+<body>
+        <form name="login_form" class="elegant-aero" method="post" onsubmit="return mycheck();" action="login.php">
+            <h1 style="color:white;">登录
+                <span id="hips" style="color:white;">Please fill all the texts in the fileds.</span>
+            </h1>
+            <br>
+
+            <div>
+                <font size="3" color="white"><span>用户名&nbsp;&nbsp;</span></font>
+                <input type="text" name="name" id="name" value="" onblur="checkName();"/><span id="nameinfo"></span>
+                <br><br>
+            </div>
+
+            <div>
+                <font size="3" color="white"><span>密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;</span></font>
+                <input type="password" name="password" id="password" value="" onblur="checkPassword();"/><span id="passwordinfo"></span>
+                <br><br>
+            </div>
+            <div>
+                <label><span> &nbsp; </span></label>
+                <input type="submit" class="button" value="登录"/>
+                <br><br>
+                <span class="zc" style="color:white;">如果你还没有注册,请&nbsp;<a href="/KeChengSheJi/Register/register.html">点击这里</a>进行注册<br>
+                </span>
+                <span class="gly" style="color:white;">如果你想使用管理员登录,请&nbsp;<a href="/KeChengSheJi/Administrator/adminlogin.html">点击这里</a></span><br>
+                <span class="xg" style="color:white;">如果你想修改密码,请&nbsp;<a href="/KeChengSheJi/Revise/revise.html">点击这里</a>进行修改密码</span>
+
+            </div>
+        </form>
+
+
+</body>
+</html>

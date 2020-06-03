@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>删除用户</title>
+    <link href="deluser.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+        <form name="del_form" class="elegant-aero" method="post" onsubmit="return mycheck();" action="deluser.php">
+            <h1 style="color:gray;">删除用户</h1>
+            <br>
+
+            <div>
+                <font size="3" color="gray"><span>用户名&nbsp;&nbsp;</span></font>
+                <input type="text" name="name" id="name" value="" onblur="checkName();"/>
+                <span id="nameinfo"></span>
+                <br><br>
+            </div>
+
+            <div>
+                <label><span> &nbsp; </span></label>
+                <input type="submit" class="button" value="删除"/>
+            </div>
+            <br><span class="fanhui"><a href="/KeChengSheJi/adminhome.html" style="color:black;text-decoration: none;">返回</a></span>
+        </form>
+</body>
+</html>

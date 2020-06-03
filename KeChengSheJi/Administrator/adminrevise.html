@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>管理员修改</title>
+    <link href="/KeChengSheJi/Revise/revise.css" rel="stylesheet" type="text/css" />
+    <script src="/KeChengSheJi/Revise/revise.js"></script>
+</head>
+<body>
+    <form name="revise_form" class="elegant-aero" method="post" onsubmit="return mycheck();" action="adminrevise.php">
+            <h1 style="color:white;">修改管理员密码</h1>
+            <br><br>
+
+            <div>
+                <font size="3" color="white"><span>管&nbsp;&nbsp;理&nbsp;员</span></font>
+                <input type="text" name="name" id="name" value="" onblur="checkName();"/><span id="nameinfo"></span>
+                <br><br>
+            </div>
+
+            <div>
+                <font size="3" color="white"><span>原&nbsp;&nbsp;密&nbsp;码</span></font>
+                <input type="password" name="password" id="password" value="" onblur="checkPassword();"/><span id="passwordinfo"></span>
+                <br><br>
+            </div>
+
+            <div>
+                <font size="3" color="white"><span>新&nbsp;&nbsp;密&nbsp;码</span></font>
+                <input type="password" name="newpassword" id="newpassword" value="" onblur="checkNewpassword();"/><span id="newpasswordinfo"></span>
+                <br><br>
+            </div>
+
+            <div>
+                <font size="3" color="white"><span>密码确认</span></font>
+                <input type="password" name="repassword" id="repassword" value="" onblur="checkRepassword();"/><span id="repasswordinfo"></span>
+                <br><br>
+            </div>
+
+            <div>
+                <label><span> &nbsp; </span></label>
+                <input type="submit" class="button" value="立即修改"/>
+                <br><br>
+            </div>
+        </form>
+</body>
+</html>
+

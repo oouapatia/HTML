@@ -1,0 +1,62 @@
+body{
+    width: auto;
+    height: auto;
+    background:url(/KeChengSheJi/images/alterPwdBackground.jpg)  no-repeat center;
+    background-size:cover;
+    background-attachment:fixed;
+    background-color:#CCCCCC;
+}
+
+.elegant-aero{
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 100px;
+    max-width: 500px;
+    padding: 20px 20px 20px 20px;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+.legant-aero h1{
+    font: 30px;
+    padding: 10px 10px 10px 20px;
+    display: block;
+    background: #C0E1FF;
+    border-bottom: 1px solid #BBDDFF;
+    margin: -20px -20px 15px;
+}
+.elegant-aero label{
+    display: block;
+    margin: 0px 0px 5px;
+}
+.button{
+    border-radius: 5px;
+    cursor: pointer;
+    width: 310px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    background-color: #FFCC00;
+    margin-left: 15px;
+}
+#name{
+    width: 250px;
+    height: 30px;
+    background-color: #FEF8C9;
+}
+#password{
+    width: 250px;
+    height: 30px;
+    background-color: #FEF8C9;
+}
+#newpassword{
+    width: 250px;
+    height: 30px;
+    background-color: #FEF8C9;
+}
+#repassword{
+    width: 250px;
+    height: 30px;
+    background-color: #FEF8C9;
+}
+
+
